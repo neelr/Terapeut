@@ -27,3 +27,6 @@ We used Dialogflow for the FULL chatbot and we hard coded the website!
 ## Issues
 
 Feel free to post ANY issues!
+
+Made for LaunchHacks Hackathon
+https://launchhacks.tech
