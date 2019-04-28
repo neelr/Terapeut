@@ -20,8 +20,11 @@
     }
   }
   :root {
-    --danger-color : #2d61ee;
+    --danger-color : #ffc524;
     --danger-hover : #aa6b0c;
+  }
+  html {
+    scroll-behavior: smooth;
   }
   .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous,
   .pagination-next,
@@ -308,7 +311,7 @@
   iframe,
   object,
   video {
-    height: auto;
+    height: 100%;
     max-width: 100%;
   }
   
