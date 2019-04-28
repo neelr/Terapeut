@@ -4,7 +4,7 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Terapeut</title>
+      <title>terapeut</title>
       <link rel="stylesheet" href="style.css">
       <link rel="icon" href="logo.png">
       <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -15,7 +15,7 @@
                <a>
                <img style="padding:10px;" src="logo.png" class="image is-48x48">
                </a>
-               <p style="float: right; margin: 18px;" class="title is-6">Terapeut</p>
+               <p style="float: right; margin: 18px;" class="title is-6">terapeut</p>
                <span id="nav-toggle" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                <span aria-hidden="true"></span>
                <span aria-hidden="true"></span>
@@ -30,6 +30,9 @@
                    <a id = "chat-nav" class="navbar-item" href="#chat">
                    Chatbot
                    </a>
+                   <a id = "mobile-nav" class="navbar-item" href="#mobile">
+                        Mobile
+                   </a>
                    <a id = "devs-nav" class="navbar-item" href="#devs">
                    Developers
                    </a>
@@ -39,10 +42,10 @@
       <div id="about" class="hero is-fullheight is-success">
          <div class="hero-body">
             <div class="container has-text-center">
-               <h1 class="title is-1">Terapeut</h1>
+               <h1 class="title is-1">terapeut</h1>
                <p class="subtitle">The online therapist  </p>
                <img style="padding:10px;" src="logo.png" class="image is-128x128">
-               <p>Terapeut is the online therapist open to anyone.  Terapeut enables you to speak your feelings, without having to have someone on the other side.  This enables more people to access therapy at a time without waiting for live asssistance.  Terapeut also allows people to do this anonymously. One of the other great advantages of Terapeut is that for people who feel anxiety and dont feel safe confessing to a human, a robot will not judge you and will always be accepting!</p>
+               <p>terapeut is the online therapist open to anyone.  terapeut enables you to speak your feelings, without having to have someone on the other side.  This enables more people to access therapy at a time without waiting for live asssistance.  Terapeut also allows people to do this anonymously. One of the other great advantages of Terapeut is that for people who feel anxiety and dont feel safe confessing to a human, a robot will not judge you and will always be accepting!</p>
                <br>
                <p><strong>For a phone please call <a href="tel:1-323-364-7905">+1 323-364-7905</a></strong></p>
             </div>
@@ -51,7 +54,7 @@
         <div id="chat" class="hero is-danger is-fullheight">
          <div class="hero-body">
             <div class="container has-text-center">
-                    <h1 class="title">Terapeut Chatbot</h1>
+                    <h1 class="title">terapeut Chatbot</h1>
                     <h1 class="subtitle">Say Hello!</h1>
                 <div class="columns">
                     <div class="column">
@@ -76,11 +79,26 @@
             </div>
          </div>
       </div>
+      <div id="mobile" class="hero is-light is-fullheight">
+            <div class="hero-body">
+               <div class="container has-text-center">
+                       <h1 class="title">Get it on Mobile</h1>
+                   <div class="columns">
+                       <div class="column">
+                           <a><img src ="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" style = "float: left;"></a>
+                       </div>
+                       <div class="column">
+                          <h2>IOS stuff here</h2>
+                       </div>
+                   </div>
+               </div>
+            </div>
+         </div>
       <div id="devs" class="hero is-warning">
       <div class="hero-body">
          <div class="container has-text-center">
             <h1 class="title">Developers</h1>
-            <h1 class="subtitle">The developers of Terapeut</h1>
+            <h1 class="subtitle">The developers of terapeut</h1>
             <div class="columns">
                <div class="column">
                   <div class="card">
@@ -253,20 +271,30 @@
             document.getElementById("about-nav").className = "navbar-item is-active";
             document.getElementById("devs-nav").className = "navbar-item";
             document.getElementById("chat-nav").className = "navbar-item";
+            document.getElementById("mobile-nav").className = "navbar-item";
          };
          var chat = document.getElementById("chat");
          chat.onmouseover=function() {
             document.getElementById("chat-nav").className = "navbar-item is-active";
             document.getElementById("devs-nav").className = "navbar-item";
+            document.getElementById("mobile-nav").className = "navbar-item";
             document.getElementById("about-nav").className = "navbar-item";
+         };
+         var mobile = document.getElementById("mobile");
+         devs.onmouseover = function() {
+            document.getElementById("mobile-nav").className = "navbar-item is-active";
+            document.getElementById("about-nav").className = "navbar-item";
+            document.getElementById("chat-nav").className = "navbar-item";
+            document.getElementById("devs-nav").className = "navbar-item";
          };
          var devs = document.getElementById("devs");
          devs.onmouseover = function() {
             document.getElementById("devs-nav").className = "navbar-item is-active";
             document.getElementById("about-nav").className = "navbar-item";
             document.getElementById("chat-nav").className = "navbar-item";
+            document.getElementById("mobile-nav").className = "navbar-item";
+
          };
-         
             (function() {
             var burger = document.querySelector('#nav-toggle');
             var menu = document.querySelector('.navbar-menu');
