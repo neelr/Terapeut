@@ -12,10 +12,13 @@ First you can visit https://terapeut.tech or call +1 323-364-7905
 
 ## Contributors
 
-Neel Redkar (Hacker719)
-Manav Bokinala (mbokinala)
-Evan Nishi
-Eric Pedley
+- Neel Redkar (Hacker719)
+
+- Manav Bokinala (mbokinala)
+
+- Evan Nishi
+
+- Eric Pedley
 
 ## Sources
 
