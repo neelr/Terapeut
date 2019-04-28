@@ -1,6 +1,6 @@
 <!--adapted from buma.io template-->
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,39 +10,70 @@
       <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
    </head>
    <body>
-      <nav class="navbar is-link">
-         <div class="navbar-brand">
-            <a href="/">
-            <img style="padding:10px;" src="logo.png" class="image is-48x48">
-            </a>
-            <span id="nav-toggle" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            </span>
-         </div>
-         <div class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item is-active">
-                Home
-                </a>
-                <a class="navbar-item" href="chat.html">
-                Chatbot
-                </a>
+      <nav class="navbar is-link is-fixed-top">
+            <div class="navbar-brand">
+               <a>
+               <img style="padding:10px;" src="logo.png" class="image is-48x48">
+               </a>
+               <span id="nav-toggle" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+               <span aria-hidden="true"></span>
+               <span aria-hidden="true"></span>
+               <span aria-hidden="true"></span>
+               </span>
             </div>
-         </div>
-      </nav>
-      <div class="hero is-fullheight is-success">
+            <div class="navbar-menu">
+               <div class="navbar-start">
+                   <a class="navbar-item is-active" href="#about">
+                   About
+                   </a>
+                   <a class="navbar-item" href="#chat">
+                   Chatbot
+                   </a>
+                   <a class="navbar-item" href="#devs">
+                   Developers
+                   </a>
+               </div>
+            </div>
+         </nav>
+      <div id="about" class="hero is-fullheight is-success">
          <div class="hero-body">
             <div class="container has-text-center">
                <h1 class="title is-1">Terapeut</h1>
                <p class="subtitle">The online therapist  </p>
                <img style="padding:10px;" src="logo.png" class="image is-128x128">
-               <p>Terapeut is the online therapist open to anyone.  Terapeut enables you to speak your feelings, without having to have someone on the other side.  This enables more people to access therapy at a time without waiting for live asssistance.  Terapeut also allows people to do this anonymously, or create an accout to keep track of their mental health over a long time period.</p>
+               <p>Terapeut is the online therapist open to anyone.  Terapeut enables you to speak your feelings, without having to have someone on the other side.  This enables more people to access therapy at a time without waiting for live asssistance.  Terapeut also allows people to do this anonymously. One of the other great advantages of Terapeut is that for people who feel anxiety and dont feel safe confessing to a human, a robot will not judge you and will always be accepting!</p>
             </div>
          </div>
       </div>
-      <div class="hero is-warning">
+        <div id="chat" class="hero is-danger is-fullheight">
+         <div class="hero-body">
+            <div class="container has-text-center">
+                    <h1 class="title">Terapeut Chatbot</h1>
+                    <h1 class="subtitle">Say Hello!</h1>
+                <div class="columns">
+                    <div class="column is-half">
+                        <div class="box is-hidden-desktop" style="height:100vw">
+                            <iframe
+                            allow="microphone;"
+                            width="100%"
+                            height="100%"
+                            src="https://console.dialogflow.com/api-client/demo/embedded/ae4eb7a2-75ce-4a86-b2dd-3f7142b943fc">
+                        </iframe>
+                        </div>
+                        <div class="box is-hidden-mobile" style="height:50vw">
+                            <iframe
+                            allow="microphone;"
+                            width="100%"
+                            height="100%"
+                            src="https://console.dialogflow.com/api-client/demo/embedded/ae4eb7a2-75ce-4a86-b2dd-3f7142b943fc">
+                        </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </div>
+      <div id="devs" class="hero is-warning">
       <div class="hero-body">
          <div class="container has-text-center">
             <h1 class="title">Developers</h1>
@@ -54,8 +85,8 @@
                         <p class="card-header-title">Neel Redkar</p>
                      </header>
                      <div class="card-content">
-                        <p>Hey, I'm Neel.  I am freshman at Monta Vista high, and I love programming. </p>
-                        <figure class="image is-128x128">
+                        <p>Hi! My name is Neel Redkar and I am an eight grader at WRMS. I worked on the frontend UI and the backend Dialogflow machine learning! I love to code and program for fun as a hobby!</p>
+                        <figure style="margin:10px" class="image is-128x128">
                            <img class="is-rounded" src="https://dvpc.tk/assets/portrait.jpg">
                         </figure>
                      </div>
