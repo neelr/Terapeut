@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="style.css">
       <link rel="icon" href="logo.png">
       <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    </head>
    <body>
       <nav class="navbar is-link is-fixed-top">
@@ -302,6 +303,30 @@
                 burger.classList.toggle('is-active');
                 menu.classList.toggle('is-active');
             });
-        })();</script>
+        })();
+        var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://hasura-10910.herokuapp.com/v1alpha1/graphql",
+  "method": "POST",
+  "headers": {
+    "origin": "https://hasura-10910.herokuapp.com",
+    "accept-encoding": "gzip, deflate, br",
+    "accept-language": "en-US,en;q=0.9,la;q=0.8",
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36",
+    "content-type": "application/json",
+    "accept": "*/*",
+    "referer": "https://hasura-10910.herokuapp.com/console/api-explorer",
+    "connection": "keep-alive",
+    "cache-control": "no-cache",
+    "postman-token": "5d920cde-0811-640b-9984-870eaf9c8e0c"
+  },
+  "data": "{\"query\":\"mutation {\\n  update_terapeut(where: {chats: {_is_null: false}}, _inc: {chats: 1}) {\\n    returning {\\n      chats\\n    }\\n  }\\n}\\n\",\"variables\":null}"
+}
+
+$.ajax(settings).done((res) => {
+  console.log(res.data.update_terapeut.returning[0].chats)
+});
+</script>
    </body>
 </html>
