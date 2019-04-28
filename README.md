@@ -1,6 +1,6 @@
 # Terapeut
 
-<img src="https://storage.googleapis.com/cloudprod-apiai/58731e6e-fdf3-4a25-83f0-f266ed382636_s.png" >
+<img src="http://neelredkar.tech/logo.png" >
 
 ## What it is
 
