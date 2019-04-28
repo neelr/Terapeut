@@ -1,10 +1,10 @@
-<!--adapted from buma.io template-->
+<!--adapted from buma.io template under MIT liscence-->
 <!DOCTYPE html>
 <html class="has-navbar-fixed-top">
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>terapeut</title>
+      <title>Terapeut</title>
       <link rel="stylesheet" href="style.css">
       <link rel="icon" href="logo.png">
       <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -31,9 +31,9 @@
                    <a id = "chat-nav" class="navbar-item" href="#chat">
                    Chatbot
                    </a>
-                   <a id = "mobile-nav" class="navbar-item" href="#mobile">
-                        Mobile
-                   </a>
+                   <a id = "analytics-nav" class="navbar-item" href="#analytics">
+                        Analytics
+                  </a>
                    <a id = "devs-nav" class="navbar-item" href="#devs">
                    Developers
                    </a>
@@ -43,7 +43,7 @@
       <div id="about" class="hero is-fullheight is-success">
          <div class="hero-body">
             <div class="container has-text-center">
-               <h1 class="title is-1">terapeut</h1>
+               <h1 class="title is-1">Terapeut</h1>
                <p class="subtitle">The online therapist  </p>
                <img style="padding:10px;" src="logo.png" class="image is-128x128">
                <p>terapeut is the online therapist open to anyone.  terapeut enables you to speak your feelings, without having to have someone on the other side.  This enables more people to access therapy at a time without waiting for live asssistance.  Terapeut also allows people to do this anonymously. One of the other great advantages of Terapeut is that for people who feel anxiety and dont feel safe confessing to a human, a robot will not judge you and will always be accepting!</p>
@@ -61,6 +61,7 @@
                     <div class="column">
                         <div class="box is-hidden-desktop" style="height:100vw">
                             <iframe
+                            id="chat"
                             allow="microphone;"
                             width="100%"
                             height="100%"
@@ -80,18 +81,27 @@
             </div>
          </div>
       </div>
-      <div id="mobile" class="hero is-light is-fullheight">
+         <div id = analytics class="hero is-fullheight is-dark">
             <div class="hero-body">
                <div class="container has-text-center">
-                       <h1 class="title">Get it on Mobile</h1>
-                   <div class="columns">
-                       <div class="column">
-                           <a><img width=256 height=128 href="" src ="https://cdn-images-1.medium.com/max/1600/1*OIIv4FEjJQMqh-zEPhtlYA.png"></a>
-                       </div>
-                       <div class="column">
-                          <h2>IOS stuff here</h2>
-                       </div>
-                   </div>
+                     <h1 class="title">Analytics</h1>
+                     <h1 class="subtitle">Powered By Hasura</h1>
+                  <div class="columns">
+                     <div class="column">
+                        <div class="box">
+                        <div class="column-body">
+                           <p class="title is-3 has-text-dark">Number of people who visited: <i id="people"></i></p>
+                        </div>
+                     </div>
+                     </div>
+                     <div class="column">
+                           <div class="box">
+                           <div class="column-body">
+                              <p class="title is-3 has-text-dark">Number of emails sent: <i id="texts"></i></p>
+                           </div>
+                        </div>
+                        </div>
+                  </div>
                </div>
             </div>
          </div>
@@ -140,9 +150,9 @@
                         <p class="card-header-title">Manav Bokinala</p>
                      </header>
                      <div class="card-content">
-                        <p>Hey, I'm Manav Bokinala, an 8th grader at Windemere Ranch Middle School. I enjoy programming, tinkering with Arduino, and reading.</p>
+                        <p>Hey, I'm Manav Bokinala, an 8th grader at Windemere Ranch Middle School. I enjoy programming, tinkering with Arduino, and reading.                        </p>
                         <figure style="margin-bottom:10px;" class="image is-128x128">
-                           <img class="is-rounded" src="https://cheonmedia.com/wp-content/uploads/2018/08/manav.jpeg">
+                           <img class="is-rounded" src="https://i.ibb.co/61RsPRS/manav.jpg">
                         </figure>
                      </div>
                      <div class="card-footer">
@@ -152,7 +162,7 @@
                         </span>
                         Github
                         </a>
-                        <a href="mailto:manavbokinala@gmail.com" class="card-footer-item has-text-link">
+                        <a href="mailto:manav.bokinala@gmail.com" class="card-footer-item has-text-link">
                         <span class="icon">
                         <i class="fas fa-envelope"></i>
                         </span>
@@ -187,7 +197,7 @@
                         </span>
                         Github
                         </a>
-                        <a href="mailto:ericpedley@gmail.com" class="card-footer-item has-text-link">
+                        <a onclick="onclick()" href="mailto:ericpedley@gmail.com" class="card-footer-item has-text-link">
                         <span class="icon">
                         <i class="fas fa-envelope"></i>
                         </span>
@@ -208,8 +218,8 @@
                         <p class="card-header-title">Evan Nishi</p>
                      </header>
                      <div class="card-content">
-                        <p>Hey my name is Evan Nishi, and I'm a freshman at Las Lomas high.  I love programming, math, circuitry, and biking.  I have experience using python, javascript</p>
-                        <figure style="margin-bottom:10px;" class="image is-128x128">
+                        <p>Hey my name is Evan Nishi, and I'm a freshman at Las Lomas high.  I love programming, math, circuitry, and biking.  I have experience using python, javascript and libraries such as tensorflow, numpy, matplotlib, and keras.</p>
+                        <figure style="margin-bottom:10px;" class="image is-64x64">
                            <img class="is-rounded" src="55752428_2365113556872642_942957226568450048_n[1] (1).jpg">
                         </figure>
                      </div>
@@ -220,7 +230,7 @@
                         </span>
                         Github
                         </a>
-                        <a href="mailto:enishi" class="card-footer-item has-text-link">
+                        <a href="mailto:evan@srnd.org" class="card-footer-item has-text-link">
                         <span class="icon">
                         <i class="fas fa-envelope"></i>
                         </span>
@@ -257,6 +267,18 @@
                   </span>
                   <span>GitHub</span>
                   </a>
+                  <a style="margin:10px;" class="button is-link" href="https://github.com/Hacker719/Terapeut">
+                  <span class="icon">
+                  <i class="fab fa-github"></i>
+                  </span>
+                  <span>App IOS</span>
+                  </a>
+                  <a style="margin:10px;" class="button is-link" href="https://github.com/Hacker719/Terapeut">
+                  <span class="icon">
+                  <i class="fab fa-github"></i>
+                  </span>
+                  <span>App Android</span>
+                  </a>
                </div>
             </div>
             <div class="made-by-bulma">
@@ -273,6 +295,7 @@
             document.getElementById("devs-nav").className = "navbar-item";
             document.getElementById("chat-nav").className = "navbar-item";
             document.getElementById("mobile-nav").className = "navbar-item";
+            document.getElementById("analytics-nav").className = "navbar-item";
          };
          var chat = document.getElementById("chat");
          chat.onmouseover=function() {
@@ -280,13 +303,15 @@
             document.getElementById("devs-nav").className = "navbar-item";
             document.getElementById("mobile-nav").className = "navbar-item";
             document.getElementById("about-nav").className = "navbar-item";
+            document.getElementById("analytics-nav").className = "navbar-item";
          };
-         var mobile = document.getElementById("mobile");
-         mobile.onmouseover = function() {
-            document.getElementById("mobile-nav").className = "navbar-item is-active";
-            document.getElementById("about-nav").className = "navbar-item";
-            document.getElementById("chat-nav").className = "navbar-item";
+         var analytics = document.getElementById("analytics");
+         analytics.onmouseover=function() {
+            document.getElementById("analytics-nav").className = "navbar-item is-active";
             document.getElementById("devs-nav").className = "navbar-item";
+            document.getElementById("chat-nav").className = "navbar-item";
+            document.getElementById("mobile-nav").className = "navbar-item";
+            document.getElementById("about-nav").className = "navbar-item";
          };
          var devs = document.getElementById("devs");
          devs.onmouseover = function() {
@@ -294,8 +319,10 @@
             document.getElementById("about-nav").className = "navbar-item";
             document.getElementById("chat-nav").className = "navbar-item";
             document.getElementById("mobile-nav").className = "navbar-item";
+            document.getElementById("analytics-nav").className = "navbar-item";
 
          };
+         
             (function() {
             var burger = document.querySelector('#nav-toggle');
             var menu = document.querySelector('.navbar-menu');
@@ -319,14 +346,38 @@
     "referer": "https://hasura-10910.herokuapp.com/console/api-explorer",
     "connection": "keep-alive",
     "cache-control": "no-cache",
-    "postman-token": "5d920cde-0811-640b-9984-870eaf9c8e0c"
   },
   "data": "{\"query\":\"mutation {\\n  update_terapeut(where: {chats: {_is_null: false}}, _inc: {chats: 1}) {\\n    returning {\\n      chats\\n    }\\n  }\\n}\\n\",\"variables\":null}"
 }
-
 $.ajax(settings).done((res) => {
-  console.log(res.data.update_terapeut.returning[0].chats)
+  var people = res.data.update_terapeut.returning[0].chats;
+  document.getElementById('people').innerHTML = people;
 });
+function onclick() {
+   var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://hasura-10910.herokuapp.com/v1alpha1/graphql",
+  "method": "POST",
+  "headers": {
+    "origin": "https://hasura-10910.herokuapp.com",
+    "accept-encoding": "gzip, deflate, br",
+    "accept-language": "en-US,en;q=0.9,la;q=0.8",
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36",
+    "content-type": "application/json",
+    "accept": "*/*",
+    "referer": "https://hasura-10910.herokuapp.com/console/api-explorer",
+    "connection": "keep-alive",
+    "cache-control": "no-cache",
+    "postman-token": "ed405fa1-ba45-97b3-f394-70581bb9f82d"
+  },
+  "data": "{\"query\":\"mutation {\\n  update_terapeut(_inc: {tesxtsent: 1}, where: {tesxtsent: {}}) {\\n    returning {\\n      tesxtsent\\n    }\\n  }\\n}\\n\",\"variables\":null}"
+}
+
+$.ajax(settings).done(function (response) {
+  document.getElementById('texts').innerHTML = response.data.update_terapeut.returning[0].tesxtsent
+});
+}
 </script>
    </body>
 </html>

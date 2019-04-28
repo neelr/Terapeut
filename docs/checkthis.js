@@ -1,5 +1,4 @@
-// THIS IS FROM DIALOGFLOW (EDITED)
-
+// This is from dialogflow (edited)
 var $jscomp = $jscomp || {};
 $jscomp.scope = {};
 $jscomp.ASSUME_ES5 = !1;
@@ -936,17 +935,39 @@ var module$contents$google3$third_party$apiai$ui$legacy$src$main$webapp$js$agent
         c.keyCode === module$contents$google3$third_party$apiai$ui$legacy$src$main$webapp$js$agentDemoApp$App_App.KEY_CODES.ENTER && (c.preventDefault(), c.stopPropagation(), b.handleInput())
     };
     this.handleInput = function() {
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://hasura-10910.herokuapp.com/v1alpha1/graphql",
+            "method": "POST",
+            "headers": {
+              "origin": "https://hasura-10910.herokuapp.com",
+              "accept-encoding": "gzip, deflate, br",
+              "accept-language": "en-US,en;q=0.9,la;q=0.8",
+              "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36",
+              "content-type": "application/json",
+              "accept": "*/*",
+              "referer": "https://hasura-10910.herokuapp.com/console/api-explorer",
+              "connection": "keep-alive",
+              "cache-control": "no-cache",
+            },
+            "data": "{\"query\":\"mutation {\\n  update_terapeut(_inc: {tesxtsent: 1}, where: {tesxtsent: {}}) {\\n    returning {\\n      tesxtsent\\n    }\\n  }\\n}\\n\",\"variables\":null}"
+          }
+          
+          $.ajax(settings).done(function (response) {
+            document.getElementById('texts').innerHTML = response.data.update_terapeut.returning[0].tesxtsent
+          });
         var c = b.domHelper.queryInput.value;
         "" !== c.replace(/\s/g, "") && (b.domHelper.addUserRequestNode(module$contents$google3$third_party$apiai$ui$legacy$src$main$webapp$js$agentDemoApp$DomHelper_DomHelper.escapeString(c)), c = b.domHelper.generateEmptyServerResponseNode(), c = b.generateCallbacksForNode(c), module$exports$google3$third_party$apiai$ui$legacy$src$main$webapp$js$agentDemoApp$XhrRequest.XhrRequest.get(module$contents$google3$third_party$apiai$ui$legacy$src$main$webapp$js$agentDemoApp$App_App.API_URL, b.buildPayLoad(b.domHelper.queryInput.value)).then(c.success,
             c.error), b.domHelper.setInputValue("").scrollResultWrapperNodeToBottom())
     };
-    this.sessionId = this.guid()
-};
-module$contents$google3$third_party$apiai$ui$legacy$src$main$webapp$js$agentDemoApp$App_App.prototype.bindEventHandlers = function() {
-    this.domHelper.queryInput.addEventListener("keydown", this.hanleInputKeyDown, !1);
+    this.sessionId = this.guid()!1);
     "webkitSpeechRecognition" in window && (this.initRecognition(), module$contents$google3$third_party$apiai$ui$legacy$src$main$webapp$js$agentDemoApp$DomHelper_DomHelper.showNode(this.domHelper.mic), this.domHelper.mic.addEventListener("click", this.handleMicClick, !1));
     this.domHelper.checkAvatar();
     this.domHelper.hidePreloader()
+};
+module$contents$google3$third_party$apiai$ui$legacy$src$main$webapp$js$agentDemoApp$App_App.prototype.bindEventHandlers = function() {
+    this.domHelper.queryInput.addEventListener("keydown", this.hanleInputKeyDown, 
 };
 module$contents$google3$third_party$apiai$ui$legacy$src$main$webapp$js$agentDemoApp$App_App.prototype.initRecognition = function() {
     var a = this,
