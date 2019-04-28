@@ -23,13 +23,13 @@
             </div>
             <div class="navbar-menu">
                <div class="navbar-start">
-                   <a class="navbar-item is-active" href="#about">
+                   <a id = "about-nav" class="navbar-item is-active" href="#about">
                    About
                    </a>
-                   <a class="navbar-item" href="#chat">
+                   <a id = "chat-nav" class="navbar-item" href="#chat">
                    Chatbot
                    </a>
-                   <a class="navbar-item" href="#devs">
+                   <a id = "devs-nav" class="navbar-item" href="#devs">
                    Developers
                    </a>
                </div>
@@ -245,6 +245,26 @@
          </div>
       </footer>
       <script>
+         var about = document.getElementById("about");
+         about.onmouseover=function() {
+            document.getElementById("about-nav").className = "navbar-item is-active";
+            document.getElementById("devs-nav").className = "navbar-item";
+            document.getElementById("chat-nav").className = "navbar-item";
+         };
+         var chat = document.getElementById("chat");
+         chat.onmouseover=function() {
+            document.getElementById("chat-nav").className = "navbar-item is-active";
+            document.getElementById("devs-nav").className = "navbar-item";
+            document.getElementById("about-nav").className = "navbar-item";
+         };
+         var devs = document.getElementById("devs");
+         devs.onmouseover = function() {
+            console.log("ughh");
+            document.getElementById("devs-nav").className = "navbar-item is-active";
+            document.getElementById("about-nav").className = "navbar-item";
+            document.getElementById("chat-nav").className = "navbar-item";
+         };
+         
             (function() {
             var burger = document.querySelector('#nav-toggle');
             var menu = document.querySelector('.navbar-menu');
