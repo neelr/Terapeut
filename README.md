@@ -1,6 +1,6 @@
 # Terapeut
 
-<img height="200" src="http://neelredkar.tech/logo.png" >
+<img height="200" src="http://terapeut.tecton.tech/logo.png" >
 
 ## What it is
 
